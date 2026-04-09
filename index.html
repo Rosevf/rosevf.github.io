@@ -7,47 +7,89 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      max-width: 900px;
+      max-width: 950px;
       margin: 0 auto;
-      padding: 40px 20px;
+      padding: 40px 20px 60px;
       line-height: 1.6;
       color: #222;
       background-color: #f8f8f8;
     }
 
     h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
+      font-size: 50px;
+      margin-bottom: 8px;
     }
 
     h2 {
-      margin-top: 40px;
+      margin-top: 42px;
       font-size: 28px;
       border-bottom: 2px solid #ddd;
       padding-bottom: 8px;
     }
 
+    h3 {
+      margin-top: 0;
+      font-size: 24px;
+    }
+
     p {
       font-size: 18px;
+      margin: 10px 0;
+    }
+
+    ul {
+      font-size: 18px;
+      padding-left: 22px;
+      margin-top: 8px;
+    }
+
+    li {
+      margin-bottom: 8px;
     }
 
     .subtitle {
       font-size: 22px;
       color: #444;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
+    }
+
+    .top-links {
+      margin-top: 18px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 18px;
+      background: #222;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .button:hover {
+      background: #444;
     }
 
     .project-box {
       background: white;
-      padding: 24px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+      padding: 28px;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
       margin-top: 20px;
     }
 
-    ul {
-      font-size: 18px;
-      padding-left: 20px;
+    .meta {
+      color: #555;
+      font-size: 16px;
+      margin-bottom: 18px;
+    }
+
+    .section-block {
+      margin-top: 24px;
     }
 
     a {
@@ -59,18 +101,8 @@
       text-decoration: underline;
     }
 
-    .button {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 18px;
-      background: #222;
-      color: white;
-      border-radius: 6px;
-      text-decoration: none;
-    }
-
-    .button:hover {
-      background: #444;
+    .contact-links p {
+      margin: 6px 0;
     }
   </style>
 </head>
@@ -78,41 +110,72 @@
   <h1>Rose Vafamanesh</h1>
   <p class="subtitle">Computer Science MSc student interested in data analysis, machine learning, and security-focused roles.</p>
 
+  <div class="top-links">
+    <a class="button" href="Rose_Vafamanesh_Resume/CV.pdf" target="_blank">View Resume</a>
+    <a class="button" href="https://www.linkedin.com/in/rose-vafamanesh" target="_blank">LinkedIn</a>
+    <a class="button" href="mailto:rose.vafamanesh@gmail.com">Email</a>
+  </div>
+
   <h2>About Me</h2>
   <p>
-    I am a Computer Science MSc student with a strong interest in data analytics, machine learning, and cybersecurity-related work. My background in compliance, operations, and administration has strengthened my attention to detail, problem-solving, and ability to work carefully with documentation and sensitive information.
+    I am a Computer Science MSc student with hands-on experience in Python, SQL, Tableau, and Jupyter Notebook. My background in compliance, operations, and administration has strengthened my attention to detail, documentation, problem-solving, and ability to work carefully with confidential information.
+  </p>
+  <p>
+    I am especially interested in data analysis, machine learning, behavioural analytics, and security-focused work.
   </p>
 
   <h2>Project</h2>
   <div class="project-box">
     <h3>Insider Threat Detection Project</h3>
+    <p class="meta">MSc Dissertation Project</p>
+
     <p>
-      MSc project focused on user behaviour analysis for detecting potential insider threats using Python and machine learning.
+      This project focused on detecting potential insider threats from behavioural log data using machine learning and sequence-based modelling.
     </p>
 
-    <h3>Tools Used</h3>
-    <ul>
-      <li>Python</li>
-      <li>Jupyter Notebook</li>
-      <li>Machine Learning</li>
-      <li>Data Analysis</li>
-    </ul>
+    <div class="section-block">
+      <h3>Overview</h3>
+      <p>
+        I developed an MSc dissertation project using the CERT r4.2 insider threat dataset to analyze user behaviour and identify suspicious activity patterns. The goal was to improve insider threat detection while supporting clearer, more interpretable analysis for security review.
+      </p>
+    </div>
 
-    <h3>What I Did</h3>
-    <ul>
-      <li>Explored behavioural data to identify patterns linked to insider threat risk.</li>
-      <li>Prepared and analyzed data using Python.</li>
-      <li>Applied machine learning concepts to support threat detection.</li>
-      <li>Documented findings, limitations, and future improvements.</li>
-    </ul>
+    <div class="section-block">
+      <h3>Tools Used</h3>
+      <ul>
+        <li>Python</li>
+        <li>Jupyter Notebook</li>
+        <li>Pandas and NumPy</li>
+        <li>scikit-learn</li>
+        <li>TensorFlow / Keras</li>
+        <li>Streamlit</li>
+        <li>SHAP</li>
+      </ul>
+    </div>
+
+    <div class="section-block">
+      <h3>What I Did</h3>
+      <ul>
+        <li>Prepared and analyzed behavioural log data from the CERT r4.2 dataset.</li>
+        <li>Built and evaluated a hybrid BiLSTM + CNN + attention model for insider threat detection.</li>
+        <li>Compared its performance against a logistic regression baseline.</li>
+        <li>Evaluated results using ROC-AUC, precision, recall, and F1-score.</li>
+        <li>Created a Streamlit dashboard with SHAP-based explanations to support analyst-friendly review.</li>
+      </ul>
+    </div>
+
+    <div class="section-block">
+      <h3>Results</h3>
+      <p>
+        The hybrid model improved performance over the baseline and helped reduce false positives while keeping detection results interpretable through dashboard-based review and SHAP explanations.
+      </p>
+    </div>
   </div>
 
-  <h2>Resume</h2>
-  <p>Add your resume PDF here once it is ready.</p>
-  <a class="button" href="#">View Resume</a>
-
   <h2>Contact</h2>
-  <p><a href="https://www.linkedin.com/in/rose-vafamanesh" target="_blank">LinkedIn</a></p>
-  <p><a href="mailto:rose.vafamanesh@gmail.com">Email</a></p>
+  <div class="contact-links">
+    <p><a href="https://www.linkedin.com/in/rose-vafamanesh" target="_blank">LinkedIn</a></p>
+    <p><a href="mailto:rose.vafamanesh@gmail.com">rose.vafamanesh@gmail.com</a></p>
+  </div>
 </body>
 </html>
