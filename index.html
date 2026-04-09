@@ -29,7 +29,7 @@
 
     h3 {
       margin-top: 0;
-      font-size: 24px;
+      font-size: 22px;
     }
 
     p {
@@ -89,7 +89,19 @@
     }
 
     .section-block {
-      margin-top: 24px;
+      margin-top: 28px;
+    }
+
+    .project-image {
+      width: 100%;
+      max-width: 100%;
+      border-radius: 10px;
+      margin-top: 14px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .contact-links p {
+      margin: 6px 0;
     }
 
     a {
@@ -99,10 +111,6 @@
 
     a:hover {
       text-decoration: underline;
-    }
-
-    .contact-links p {
-      margin: 6px 0;
     }
   </style>
 </head>
@@ -130,13 +138,13 @@
     <p class="meta">MSc Dissertation Project</p>
 
     <p>
-      This project focused on detecting potential insider threats from behavioural log data using machine learning and sequence-based modelling.
+      This project focused on detecting potential insider threats from behavioural log data using Python and sequence-based machine learning.
     </p>
 
     <div class="section-block">
       <h3>Overview</h3>
       <p>
-        I developed an MSc dissertation project using the CERT r4.2 insider threat dataset to analyze user behaviour and identify suspicious activity patterns. The goal was to improve insider threat detection while supporting clearer, more interpretable analysis for security review.
+        I developed an MSc dissertation project using the CERT r4.2 insider threat dataset to analyze user behaviour and identify suspicious activity patterns. The goal was to improve insider threat detection while keeping results interpretable and more useful for analyst review.
       </p>
     </div>
 
@@ -154,21 +162,45 @@
     </div>
 
     <div class="section-block">
-      <h3>What I Did</h3>
+      <h3>What I Built</h3>
       <ul>
         <li>Prepared and analyzed behavioural log data from the CERT r4.2 dataset.</li>
-        <li>Built and evaluated a hybrid BiLSTM + CNN + attention model for insider threat detection.</li>
+        <li>Built and evaluated a hybrid BiLSTM + CNN + attention model.</li>
         <li>Compared its performance against a logistic regression baseline.</li>
-        <li>Evaluated results using ROC-AUC, precision, recall, and F1-score.</li>
-        <li>Created a Streamlit dashboard with SHAP-based explanations to support analyst-friendly review.</li>
+        <li>Created a Streamlit dashboard to review predictions and model performance.</li>
+        <li>Used SHAP-based explanations to make results easier to interpret.</li>
       </ul>
     </div>
 
     <div class="section-block">
       <h3>Results</h3>
       <p>
-        The hybrid model improved performance over the baseline and helped reduce false positives while keeping detection results interpretable through dashboard-based review and SHAP explanations.
+        The hybrid model improved ROC-AUC from about 0.68 to 0.73 and reduced false positives by roughly 42 percent compared with the baseline, helping produce a cleaner and more useful alert set.
       </p>
+    </div>
+
+    <div class="section-block">
+      <h3>Implementation Snapshot</h3>
+      <p>
+        This image shows part of the implementation used to build the model, including the attention mechanism and sequence-based design.
+      </p>
+      <img src="model-code.png" alt="Model code screenshot" class="project-image">
+    </div>
+
+    <div class="section-block">
+      <h3>Evaluation Dashboard</h3>
+      <p>
+        I built a Streamlit dashboard to review thresholds, compare model performance, and inspect evaluation outputs in a more practical and readable way.
+      </p>
+      <img src="evaluation-dashboard.png" alt="Evaluation dashboard screenshot" class="project-image">
+    </div>
+
+    <div class="section-block">
+      <h3>Explainability</h3>
+      <p>
+        SHAP was used to highlight which time steps had the strongest influence on model output, helping connect predictions back to behavioural patterns.
+      </p>
+      <img src="shap-summary.png" alt="SHAP summary plot" class="project-image">
     </div>
   </div>
 
